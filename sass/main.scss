@@ -56,7 +56,7 @@ body {
 
 .navbar {
   background-color: $primary !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-caption {
@@ -64,8 +64,8 @@ body {
 }
 
 .carousel-indicators {
-  margin-bottom: 2rem;
-  
+  margin-bottom: 5em;
+
   button {
     width: 12px !important;
     height: 12px !important;
@@ -74,12 +74,12 @@ body {
     background-color: rgba(255, 255, 255, 0.5) !important;
     border: 2px solid transparent !important;
     transition: all 0.3s ease;
-    
+
     &.active {
       background-color: $warning !important;
       transform: scale(1.2);
     }
-    
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.8) !important;
     }
@@ -91,7 +91,7 @@ body {
   width: 5%;
   opacity: 0;
   transition: opacity 0.3s ease;
-  
+
   &:hover {
     opacity: 1;
   }
@@ -101,7 +101,7 @@ body {
   .carousel-control-prev,
   .carousel-control-next {
     opacity: 0.7;
-    
+
     &:hover {
       opacity: 1;
     }
@@ -109,7 +109,7 @@ body {
 }
 
 #galleryBg {
-  transition: background-image 0.8s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
   &.loading {
     opacity: 0.7;
     filter: blur(2px);
@@ -120,209 +120,8 @@ body {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-$carousel-transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+$carousel-transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 
 #carouselSlider {
   transition: transform $carousel-transition;
-}
-
-.carousel-item {
-  display: block !important;
-  margin-right: 10px;
-  flex: 0 0 auto;
-
-  width: 150px;
-  height: 185px;
-
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  transform: scale(0.85);
-  opacity: 0.6;
-  transition: all 0.5s ease;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-
-  &.active {
-    transform: scale(1);
-    opacity: 1;
-    width: 185px;
-    height: 230px;
-    border-color: $warning;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 3px $warning;
-    z-index: 10;
-
-    .item-background img {
-      transform: scale(1.05);
-    }
-    .item-overlay {
-      opacity: 0.95;
-    }
-    .item-content {
-      transform: translateY(0);
-    }
-  }
-
-  &:not(.active):hover {
-    transform: scale(0.9);
-    opacity: 0.8;
-    .item-background img {
-      transform: scale(1.1);
-    }
-    .item-content {
-      transform: translateY(-4px);
-    }
-  }
-
-  .item-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-      &.loading {
-        animation: shimmer 1.5s infinite;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.2) 50%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        background-size: 1000px 100%;
-      }
-    }
-  }
-
-  .item-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    transition: opacity 0.3s ease;
-  }
-
-  .item-content {
-    position: absolute;
-    bottom: 8px;
-    left: 8px;
-    right: 8px;
-    z-index: 5;
-    color: white;
-    transition: transform 0.3s ease;
-
-    .item-type {
-      font-size: 0.8rem;
-      opacity: 0.8;
-      margin-bottom: 0.3rem;
-      text-transform: uppercase;
-    }
-    .item-title {
-      font-size: 1rem;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-  }
-}
-
-.btn-outline-light {
-  border-width: 2px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
-  }
-  &:active {
-    transform: scale(0.95);
-  }
-}
-
-.progress {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  .progress-bar {
-    box-shadow: 0 0 10px rgba(216, 189, 138, 0.5);
-    transition: width 0.6s ease;
-  }
-}
-
-#slideCounter {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-// Responsive
-@include media-breakpoint-down(lg) {
-  .carousel-item {
-    width: 125px;
-    height: 160px;
-    &.active {
-      width: 160px;
-      height: 205px;
-    }
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .carousel-caption {
-    padding-bottom: 5rem !important;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-    
-    h1 {
-      font-size: 2.5rem;
-    }
-    
-    p.lead {
-      font-size: 1rem !important;
-    }
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: none;
-  }
-  .carousel-item {
-    width: 105px;
-    height: 135px;
-    &.active {
-      width: 135px;
-      height: 175px;
-    }
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .carousel-item {
-    width: 90px;
-    height: 120px;
-    &.active {
-      width: 115px;
-      height: 155px;
-    }
-
-    .item-type {
-      font-size: 0.65rem;
-    }
-    .item-title {
-      font-size: 0.85rem;
-    }
-  }
-}
-
-@include media-breakpoint-down(xs) {
-  .carousel-item {
-    width: 80px;
-    height: 110px;
-    &.active {
-      width: 100px;
-      height: 140px;
-    }
-  }
 }
