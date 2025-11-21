@@ -62,8 +62,90 @@
             </div>
         </div>
     </nav>
-    <header>
-        <h1>Contact Beautiful Arts</h1>
-    </header>
+    <!-- Contact Section -->
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center position-relative overflow-hidden py-5">
+        <!-- Background Image -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
+            <img src="assets/images/museum_art.jpg" alt="Background" class="w-100 h-100 object-fit-cover" />
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+        </div>
+
+        <div class="container position-relative z-1">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row contact-card rounded-4 overflow-hidden" style="min-height: 650px;">
+        <!-- Contact Form Column -->
+                        <div class="col-lg-7 p-5 bg-dark text-light position-relative" style="--bs-bg-opacity: 0.4;">
+                            <div class="h-100 d-flex flex-column justify-content-center">
+                                <div class="mb-4">
+                                    <h5 class="text-warning text-uppercase letter-spacing-1 mb-2">Contact Us</h5>
+                                    <h2 class="display-5 fw-bold mb-3">Let's Start a Conversation</h2>
+                                    <p class="text-light opacity-75">Whether you're interested in purchasing art,
+                                        sponsorship, or just saying hello.</p>
+                                </div>
+
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text"
+                                                    class="form-control bg-transparent border-primary text-light rounded-3"
+                                                    id="name" placeholder="Your Name" required>
+                                                <label for="name" class="text-secondary">Your Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="email"
+                                                    class="form-control bg-transparent border-primary text-light rounded-3"
+                                                    id="email" placeholder="name@example.com" required>
+                                                <label for="email" class="text-secondary">Email Address</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <select
+                                                    class="form-select bg-transparent border-primary text-light rounded-3"
+                                                    id="subject">
+                                                    <option class="bg-dark text-light" value="general">...Choose your
+                                                        Subject
+                                                    </option>
+                                                    <option class="bg-dark text-light" value="general">General Inquiry
+                                                    </option>
+                                                    <option class="bg-dark text-light" value="purchase">Art Purchase
+                                                    </option>
+                                                    <option class="bg-dark text-light" value="sponsorship">Sponsorship
+                                                    </option>
+                                                    <option class="bg-dark text-light" value="visit">Plan a Visit
+                                                    </option>
+                                                </select>
+                                                <label for="subject" class="text-secondary">Subject</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea
+                                                    class="form-control bg-transparent border-primary text-light rounded-3"
+                                                    id="message" placeholder="Leave a comment here"
+                                                    style="height: 150px;" required></textarea>
+                                                <label for="message" class="text-secondary">Your Message</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <button type="submit"
+                                                class="btn btn-warning w-100 rounded-pill py-3 fw-bold text-dark text-uppercase letter-spacing-1 shadow-sm">Send
+                                                Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="mt-4 text-center">
+                                    <span class="text-light opacity-50 small">Or email us at </span>
+                                    <a href="mailto:info@beauarts.com"
+                                        class="text-warning text-decoration-none fw-bold">info@beauarts.com</a>
+                                </div>
+                            </div>
+                        </div>
+    </main>
 </body>
 </html>
