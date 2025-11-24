@@ -53,11 +53,11 @@ body {
 .carousel-caption {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   justify-content: flex-start !important;
-  padding-top: 25vh;
+  padding-top: 20vh;
 }
 
 .carousel-indicators {
-  margin-bottom: 5em;
+  padding-bottom: 0vh;
 
   button {
     width: 12px !important;
@@ -121,6 +121,7 @@ $carousel-transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 
 #thumbnailCarouselContainer {
   top: 60%;
+  width: 50dvw;
 }
 
 #thumbnailTrack {
